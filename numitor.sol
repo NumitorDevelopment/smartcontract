@@ -6,7 +6,7 @@ pragma solidity ^0.8.4;
 // SPDX-License-Identifier: MIT
 
 /** 
-LIQUIDUS
+NUMITOR
 */
 
 interface IBEP20 {
@@ -284,7 +284,7 @@ contract Ownable is Context {
   }
 }
 
-contract Liquidus is Context, IBEP20, Ownable {
+contract Numitor is Context, IBEP20, Ownable {
   using SafeMath for uint256;
 
   mapping (address => uint256) private _balances;
@@ -297,8 +297,8 @@ contract Liquidus is Context, IBEP20, Ownable {
   string private _name;
 
   constructor() {
-    _name = "Liquidus";
-    _symbol = "LIQ";
+    _name = "Numitor";
+    _symbol = "NUMI";
     _decimals = 18;
     _totalSupply = 1 * 10**8 * 10**18; //100m tokens
     _balances[msg.sender] = _totalSupply;
