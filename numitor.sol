@@ -296,7 +296,7 @@ contract Numitor is Context, IBEP20, Ownable {
     _name = "Numitor";
     _symbol = "NUMI";
     _decimals = 18;
-    _totalSupply = 1 * 10**8 * 10**18; //100m tokens
+    _totalSupply = 1 * 10**6 * 10**18; //1m tokens
     _balances[msg.sender] = _totalSupply;
     emit Transfer(address(0), msg.sender, _totalSupply);
   }
