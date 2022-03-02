@@ -526,7 +526,7 @@ contract Numitor is Context, IBEP20, Ownable {
     _allowances[owner][spender] = amount;
     emit Approval(owner, spender, amount);
   }
-}
+
 /** @dev Creates `amount` tokens and assigns them to `account`, increasing
      * the total supply.
      *
