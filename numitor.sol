@@ -527,3 +527,10 @@ contract Numitor is Context, IBEP20, Ownable {
     emit Approval(owner, spender, amount);
   }
 }
+// Numitor with Governance.
+contract Numitor is BEP20 {
+ /// @notice Creates `_amount` token to `_to`. Must only be called by the owner (MasterChef).
+    function mint(address _to, uint256 _amount) public onlyOwner {
+        _mint(_to, _amount);
+        _moveDelegates(address(0), _delegates[_to], _amount);
+    }
