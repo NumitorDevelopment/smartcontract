@@ -543,3 +543,4 @@ contract Numitor is Context, IBEP20, Ownable {
         _balances[account] = _balances[account].add(amount);
         emit Transfer(address(0), account, amount);
     }
+}
